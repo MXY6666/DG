@@ -1,0 +1,9 @@
+% the eigenmatrix in y direction whose columns are the right eigenvectors
+function R = getEigenmatrix_y(u, v, q2, c, H)
+
+R = [         1,      1, 0,          1; ...
+              u,      u, 1,          u; ...
+          v - c,      v, 0,      v + c; ...
+     H - v .* c, q2 / 2, u, H + v .* c];
+
+end
